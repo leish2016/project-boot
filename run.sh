@@ -1,8 +1,8 @@
 #!/bin/sh
-SHELL_PROG=./init.sh
+SHELL_PROG=./run.sh
 
 # 要运行的jar包名称,添加执行权限 chmod 777 ./*.sh
-JAR_NAME=ai-route-boot-0.0.1-SNAPSHOT.jar
+JAR_NAME=project-boot-0.0.1.jar
 
 
 start() {
