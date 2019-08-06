@@ -1,6 +1,7 @@
 package com.tfb.project.services;
 
 
+import com.tfb.project.common.Result;
 import com.tfb.project.domain.dto.UserReq;
 import com.tfb.project.domain.entity.Userinfo;
 import com.tfb.project.mapper.UserinfoMapper;
@@ -10,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.List;
 
 
 @Service
@@ -20,16 +20,26 @@ public class UserService {
     @Autowired
     UserinfoMapper userInfoMapper;
 
-    public Userinfo addUser(UserReq userReq) {
+    public Result addUser(UserReq userReq) {
         Userinfo u = new Userinfo();
         BeanUtils.copyProperties(userReq, u);
         u.setCreateAt(new Date());
         userInfoMapper.insert(u);
-        return userInfoMapper.selectOne(u);
+        return Result.genSuccessResult(u);
     }
 
-    public List<Userinfo> getAll(){
-        return userInfoMapper.selectAll();
+    public Result delUser(Long id){
+        userInfoMapper.deleteByPrimaryKey(id);
+        return Result.genSuccessResult();
+    }
+
+    public Result updateUser(Userinfo u){
+        userInfoMapper.updateByPrimaryKeySelective(u);
+        return Result.genSuccessResult(u);
+    }
+
+    public Result getAll(){
+        return Result.genSuccessResult(userInfoMapper.selectAll());
     }
 
     

@@ -1,6 +1,7 @@
 package com.tfb.project.controller;
 
 
+import com.tfb.project.common.Result;
 import com.tfb.project.domain.dto.UserReq;
 import com.tfb.project.domain.entity.Userinfo;
 import com.tfb.project.services.UserService;
@@ -10,26 +11,41 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
+/**
+ * @author leish
+ */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/user")
 @Api(description = "用户操作服务")
 public class UserController {
 
     @Autowired
     UserService userService;
 
-    @PostMapping("/user")
+    @PostMapping
     @ApiOperation("添加用户")
-    public Userinfo addUserInfo(@RequestBody @Valid UserReq userReq){
+    public Result addUserInfo(@RequestBody @Valid UserReq userReq){
         return userService.addUser(userReq);
     }
 
 
-    @GetMapping("/users")
+    @DeleteMapping("/{id}")
+    @ApiOperation("删除用户")
+    public Result delUserInfo(@PathVariable Long id){
+        return userService.delUser(id);
+    }
+
+    @PutMapping
+    @ApiOperation("修改用户")
+    public Result updateUser(Userinfo u){
+        return userService.updateUser(u);
+    }
+
+
+    @GetMapping
     @ApiOperation("查询所有用户")
-    public List<Userinfo> findAllUserInfo() {
+    public Result findAllUserInfo() {
         return userService.getAll();
     }
 }

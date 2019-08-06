@@ -1,8 +1,8 @@
 #!/bin/sh
-SHELL_PROG=./run.sh
+SHELL_PROG=./init.sh
 
-# 要运行的jar包名称,添加执行权限 chmod 777 ./*.sh
-JAR_NAME=project-boot-0.0.1.jar
+# 要运行的jar包名称,添加执行权限 chmod -R 777 /usr/local/project-boot
+JAR_NAME=project-boot-1.0.jar
 
 
 start() {

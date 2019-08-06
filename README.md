@@ -11,3 +11,7 @@
 4. lombok 简化Bean
 5. swagger2 可视化api
 6. Hibernate Validator 服务端参数校验
+
+
+### todo
+1. swagger ui页面显示列表结果集出现id重复(直接调接口正常).
