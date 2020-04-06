@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-@ApiModel("")
+@ApiModel("用户信息表")
 public class Userinfo implements Serializable {
     /**
      * 编号
@@ -36,16 +36,16 @@ public class Userinfo implements Serializable {
     /**
      * 创建时间
      */
-    @Column(name = "create_at")
+    @Column(name = "create_time")
     @ApiModelProperty("创建时间")
-    private Date createAt;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    @Column(name = "update_at")
+    @Column(name = "update_time")
     @ApiModelProperty("更新时间")
-    private Date updateAt;
+    private Date updateTime;
 
     private static final long serialVersionUID = 1L;
 }

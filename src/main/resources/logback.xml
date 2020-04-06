@@ -4,7 +4,7 @@
     <!-- 应用名称 -->
     <property name="APP_NAME" value="project-boot"/>
     <!-- 日志输出格式 -->
-    <property name="ENCODER_PATTERN" value="%d{yyyy-MM-dd  HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n"/>
+    <property name="ENCODER_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n"/>
 
 
     <!-- 控制台日志：输出全部日志到控制台 -->

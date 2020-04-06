@@ -46,7 +46,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -142,7 +142,7 @@
                 <version>1.3.5</version>
                 <!-- 插件配置 -->
                 <configuration>
-                    <!--<overwrite>true</overwrite>-->
+                    <overwrite>true</overwrite>
                     <!--上线要取消自动生成代码-->
                     <!--<skip>true</skip>-->
                 </configuration>
@@ -151,7 +151,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.42</version>
+                        <version>8.0.13</version>
                     </dependency>
                     <!-- mapper mbg -->
                     <dependency>

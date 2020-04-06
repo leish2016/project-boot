@@ -8,13 +8,13 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
-    <result column="create_at" jdbcType="TIMESTAMP" property="createAt" />
-    <result column="update_at" jdbcType="TIMESTAMP" property="updateAt" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    id, name, phone, create_at, update_at
+    id, name, phone, create_time, update_time
   </sql>
 </mapper>

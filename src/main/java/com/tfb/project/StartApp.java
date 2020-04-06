@@ -6,6 +6,9 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 import java.util.TimeZone;
 
+/**
+ * @author LSH
+ */
 @SpringBootApplication
 @MapperScan(basePackages = "com.tfb.project.mapper")
 public class StartApp {
